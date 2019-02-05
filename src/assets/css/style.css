@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900');
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}

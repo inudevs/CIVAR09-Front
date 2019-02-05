@@ -13,7 +13,7 @@ export default {
   <div class="container">
     <NavBar/>
     <div id="title">
-      <h1>모트모트 플래너 공구 <span>7일</span></h1>
+      <h1>모트모트 플래너 <span>7일</span></h1>
     </div>
     <div id="content">
       <div class="left">
@@ -38,7 +38,7 @@ export default {
           </div>
           <div class="comment">
             <span class="profile">
-              <img src="../assets/profile.png"/>
+              <img src="https://avatars0.githubusercontent.com/u/32605822?s=460&v=4"/>
               <span class="name">1520 여준호</span>
             </span>
             <span class="payment">3000원</span>
@@ -75,13 +75,6 @@ div.left, div.right {
   float: left;
   width: 50%;
   text-align: center;
-}
-@media (max-width: 800px) {
-  /* 화면이 작은 디바이스용 -> 두 부분으로 안 나눠지고 하나로 보여짐 */
-  div.left, div.right {
-    float: none; 
-    width: 100%;
-  }
 }
 
 /* div.left */
@@ -145,7 +138,6 @@ div.comment span.profile {
   padding: 5px;
   border-radius: 10px;
   text-align: center;
-  width: 30%;
   display: inline-block;
   margin-left: .8em;
   margin-top: .5em;
@@ -189,5 +181,58 @@ div.comment span.product {
 div.comment:first-child span.product {
   /* 총대 주문 상품 -> 댓글 양옆에 테두리가 존재하기 때문에 왼쪽 마진을 조금 덜 준다 */
   margin-left: .2em;
+}
+
+@media (max-width: 800px) {
+  /* 화면이 작은 디바이스용 -> 두 부분으로 안 나눠지고 하나로 보여짐 */
+  div.left, div.right {
+    float: none; 
+    width: 100%;
+  }
+
+  /* div.left */
+  #progress {
+    margin-top: 1em;
+  }
+
+  /* div.right */
+  div.right {
+    margin-top: 3.5em;
+  }
+  #comments {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  /* 더 작은 모바일 기기 */
+  #content {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  #title h1 {
+    font-size: 2em;
+  }
+  #title h2 {
+    font-size: .8em;
+  }
+
+  /* div.right */
+  div.comment {
+    width: 95%;
+  }
+  div.comment span.name {
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+  div.comment img {
+    vertical-align: middle;
+  }
+  div.comment span.payment {
+    font-size: 1.7em;
+  }
+  div.comment span.product {
+    font-size: 1.3em;
+  }
 }
 </style>

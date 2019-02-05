@@ -1,10 +1,59 @@
+<script>
+export default {
+    name: 'NavBar',
+    methods: {
+        onClickMenu: function () {
+
+        },
+        onClickSearch: function () {
+
+        }
+    }
+}
+</script>
+
 <template>
-    <div></div>
+  <div>
+      <i class="fas fa-bars fa-2x" v-on:click="onClickMenu"></i>
+      <img src="./../assets/logo.png" class="logo"/>
+      <i class="fas fa-search fa-2x" v-on:click="onClickSearch"></i>
+  </div>
 </template>
 
 <style scoped>
+/* 전체 상단 바 */
 div {
     background-color: #ffca12;
     height: 5em;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+/* 로고 이미지 */
+img.logo {
+    height: 80%;
+    margin: 8px;
+}
+/* 아이콘 공통 스타일 */
+i.fas {
+    color: white;
+    margin: .7em;
+}
+/* 메뉴 아이콘 */
+i.fa-bars {
+    float: left;
+}
+/* 검색 아이콘 */
+i.fa-search {
+    float: right;
+}
+@media (max-width: 700px) {
+    /* 화면이 작은 디바이스용 -> 상단 바 및 아이콘 사이즈 줄이기 */
+    div {
+        height: 4em;
+    }
+    i.fas {
+        margin: .5em;
+    }
 }
 </style>

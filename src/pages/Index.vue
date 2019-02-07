@@ -39,10 +39,24 @@ div.products {
   text-align: center;
 }
 
+@media (max-width: 800px) {
+  div.products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 div.product {
   text-align: left;
   display: inline-block;
   margin: .8em;
   width: 30%;
+}
+
+@media (max-width: 800px) {
+  div.product {
+    width: 45%;
+    margin: .5em;
+  }
 }
 </style>

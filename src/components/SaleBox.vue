@@ -5,12 +5,17 @@ export default {
   name: 'SaleBox',
   components: {
     ProgressBar
+  },
+  methods: {
+    view: function () {
+      this.$router.push({ name: 'sale_view' })
+    }
   }
 }
 </script>
 
 <template>
-  <div class="product">
+  <div class="product" v-on:click="view">
     <img src="./../assets/product.png"/>
     <div class="info">
       <div class="title">

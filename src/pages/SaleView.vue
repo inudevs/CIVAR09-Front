@@ -3,7 +3,7 @@ import NavBar from './../components/NavBar.vue'
 import ProgressBar from './../components/ProgressBar.vue'
 
 export default {
-  name: 'Product',
+  name: 'SaleView',
   components: {
     NavBar,
     ProgressBar
@@ -49,13 +49,15 @@ export default {
   <div class="container">
     <NavBar/>
     <div id="title">
-      <h1>{{ name }} <span>{{ days + '일' }}</span></h1>
+      <h1>{{ name }}<span>{{ days + '일' }}</span></h1>
     </div>
     <div id="content">
       <div class="left">
         <div id="product">
           <img src="../assets/preview.png"/>
-          <ProgressBar v-bind:progress="progress"/>
+          <div class="progress-wrap">
+            <ProgressBar v-bind:progress="progress"/>
+          </div>
           <span id="goal">{{ total }}/{{ goal }}</span>
           <span id="percent">{{ progress + '%' }}</span>
         </div>

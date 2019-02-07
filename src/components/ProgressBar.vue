@@ -5,12 +5,17 @@ export default {
     progress: {
       type: Number,
       default: 0
+    },
+    minimal: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     getProgress: function () {
       return {
-        'width': ((this.progress > 100) ? 100 : this.progress) + '%'
+        'width': ((this.progress > 100) ? 100 : this.progress) + '%',
+        'height': (this.minimal) ? '.8em' : '2em'
       }
     }
   }
@@ -26,7 +31,6 @@ export default {
 <style scoped>
 #progress {
   /* 상태 바 (바깥쪽) */
-  margin-top: 2em;
   background-color: #ffe589;
   width: 100%;
 }

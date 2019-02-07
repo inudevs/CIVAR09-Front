@@ -15,6 +15,7 @@
     color: #ffe589;
     font-weight: 700;
     font-size: .9em;
+    margin-left: .2em;
 }
 div.left, div.right {
    /* 데스크탑 화면에서 각각 왼쪽, 오른쪽 div */
@@ -28,6 +29,9 @@ div.left, div.right {
 #product img {
    /* 상품 이미지 */
     width: 100%;
+}
+div.progress-wrap {
+  margin-top: 2em;
 }
 #goal, #percent {
    /* 목표 주문액 및 현재 공구 퍼센트 공통 스타일 */

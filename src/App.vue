@@ -1,16 +1,11 @@
 <script>
-import Product from './pages/Product'
-
 export default {
-  name: 'app',
-  components: {
-    Product
-  }
+  name: 'app'
 }
 </script>
 
 <template>
   <div id="app">
-    <Product/>
+    <router-view/>
   </div>
 </template>

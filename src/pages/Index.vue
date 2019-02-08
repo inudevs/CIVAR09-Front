@@ -33,30 +33,49 @@ div.category h1 {
   margin-bottom: .2em;
   color: #ffca12;
   font-weight: 900;
+  font-size: 2.3em;
 }
 
 div.products {
-  text-align: center;
-}
-
-@media (max-width: 800px) {
-  div.products {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  margin-left: 2em;
+  margin-right: 2em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 div.product {
+  justify-content: flex-start;
   text-align: left;
   display: inline-block;
-  margin: .8em;
+  margin: .5em;
   width: 30%;
 }
 
 @media (max-width: 800px) {
+  div.products {
+    margin-left: 2em;    
+    margin-right: 2em;
+  }
   div.product {
     width: 45%;
-    margin: .5em;
+    margin: .3em;
+  }
+}
+
+@media (max-width: 700px) {
+  div.category h1 {
+    font-size: 1.9em;
+  }
+}
+
+@media (max-width: 500px) {
+  div.category h1 {
+    font-size: 1.5em;
+  }
+  div.products {
+    margin-left: 1.2em;    
+    margin-right: 1.2em;
   }
 }
 </style>

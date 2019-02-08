@@ -70,4 +70,41 @@ span.progress {
   font-size: 1.3em;
   float: right;
 }
+
+@media (max-width: 1000px) {
+  div.title span.name {
+    font-size: 1.5em;
+  }
+  div.title span.days {
+    font-size: 1em;
+  }
+  span.profile {
+    font-size: 1.2em;
+  }
+  span.progress {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 570px) {
+  div.info {
+    margin-left: .1em;
+    margin-right: .1em;
+  }
+  div.title span.name {
+    font-size: 1em;
+  }
+  div.title span.days {
+    font-size: .8em;
+  }
+  span.profile {
+    font-size: .8em;
+    float: none;
+  }
+  span.progress {
+    font-size: .5em;
+    float: none;
+    margin-left: .4em;
+  }
+}
 </style>

@@ -10,15 +10,15 @@ export default {
   },
   created: function () {
     // 백엔드 API에서 현재 상품에 대한 주문액 정보를 가져오고 현황 업데이트
-    this.updateProgress()
+    this.loadData()
   },
   data: function () {
     return { // 테스트 데이터
-      name: '모트모트 플래너', // 공구 이름 
-      days: 7, // 공구 남은 일수 
+      name: '', // 공구 이름 
+      days: 0, // 공구 남은 일수 
       progress: 0, // 현재 주문 현황(%)
-      total: 6000, // 현재 주문액 총합 
-      goal: 30000, // 목표 주문액
+      total: 0, // 현재 주문액 총합 
+      goal: 0, // 목표 주문액
       comments: [ // 공구 댓글 
         {
           studentId: '1611',
@@ -38,6 +38,15 @@ export default {
     }
   },
   methods: {
+    loadData: function () {
+      const data = require(`../assets/examples/data/${this.$route.params.sale_id}.json`)
+      this.name = data.name
+      this.days = data.days
+      this.total = data.total
+      this.goal = data.goal
+      // this.comments = data.comments
+      this.updateProgress()
+    },
     updateProgress: function () { // 현재 주문 현황 업데이트
       this.progress = Math.floor((this.total/this.goal || 0)*100)
     }
@@ -54,7 +63,7 @@ export default {
     <div id="content">
       <div class="left">
         <div id="product">
-          <img src="../assets/0.png"/>
+          <img :src="require(`../assets/examples/images/${this.$route.params.sale_id}.png`)"/>
           <div class="progress-wrap">
             <ProgressBar v-bind:progress="progress"/>
           </div>

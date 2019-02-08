@@ -14,7 +14,7 @@ export default new VueRouter({
       component: Index
     },
     {
-      path: '/sale',
+      path: '/sale/:sale_id',
       name: 'sale_view',
       component: SaleView
     }

@@ -8,7 +8,12 @@ export default {
   },
   methods: {
     view: function () {
-      this.$router.push({ name: 'sale_view' })
+      this.$router.push({ 
+        name: 'sale_view', 
+        params: { 
+          sale_id: this.product.id
+        }
+      })
     }
   },
   props: {
@@ -21,7 +26,7 @@ export default {
 
 <template>
   <div class="product" v-on:click="view">
-    <img :src="require(`../assets/${product.id}.png`)"/>
+    <img :src="require(`../assets/examples/images/${product.id}.png`)"/>
     <div class="info">
       <div class="title">
         <span class="name">{{ product.name }}</span>

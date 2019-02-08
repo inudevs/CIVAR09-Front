@@ -54,7 +54,7 @@ export default {
     <div id="content">
       <div class="left">
         <div id="product">
-          <img src="../assets/preview.png"/>
+          <img src="../assets/0.png"/>
           <div class="progress-wrap">
             <ProgressBar v-bind:progress="progress"/>
           </div>
@@ -64,7 +64,7 @@ export default {
       </div>
       <div class="right">
         <div id="comments">
-          <div v-for="(profile, idx) in comments" v-bind:key={idx} class="comment">
+          <div v-for="(profile, idx) in comments" :key={idx} class="comment">
             <span class="profile">
               <img :src="profile.url"/>
               <span class="name">{{ profile.studentId }} {{ profile.name }}</span>

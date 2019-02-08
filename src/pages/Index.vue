@@ -7,6 +7,47 @@ export default {
   components: {
     NavBar,
     SaleBox
+  },
+  data: function () {
+    return {
+      products: {
+        stationery: [
+          {
+            id: 0,
+            name: '모트모트 플래너',
+            days: 7,
+            total: 10500,
+            goal: 15000,
+            profile: {
+              studentId: '1420',
+              name: '윤서진'
+            }
+          },
+          {
+            id: 1,
+            name: '맥북 프로 13인치',
+            days: 2,
+            total: 1520000,
+            goal: 2000000,
+            profile: {
+              studentId: '1520',
+              name: '여준호'
+            }
+          },
+          {
+            id: 2,
+            name: '미니언즈 가방',
+            days: 20,
+            total: 91300,
+            goal: 25000,
+            profile: {
+              studentId: '1320',
+              name: '윤영창'
+            }
+          },
+        ]
+      }
+    }
   }
 }
 </script>
@@ -18,9 +59,7 @@ export default {
       <div class="category">
         <h1>문구 <i class="fas fa-angle-right"></i></h1>
         <div class="products">
-          <SaleBox/>
-          <SaleBox/>
-          <SaleBox/>
+          <SaleBox v-for="product in products.stationery" :key="product.id" :product="product"/>
         </div>
       </div>
     </div>

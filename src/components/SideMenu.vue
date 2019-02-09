@@ -1,7 +1,13 @@
 <script>
 export default {
   name: 'SideMenu',
-  props: ['value'],
+  props: {
+    value: {},
+    right: {
+      type: Boolean,
+      default: false
+    }
+  },
   data: function () {
     return {
       show: this.value,
@@ -20,7 +26,9 @@ export default {
   methods: {
     getSideStyle: function () {
       return {
-        'width': (this.show) ? '20em' : '0'
+        'width': (this.show) ? '20em' : '0',
+        'right': (this.right) ? '0' : 'none',
+        'left': (this.right) ? 'none' : '0'
       }
     },
     getOverlayStyle: function () {
@@ -38,12 +46,12 @@ export default {
 
 <template>
   <div>
-  <div class="overlay" :style="getOverlayStyle()" v-on:click="onClickOverlay"/>
-  <div class="sidemenu" :style="getSideStyle()">
-    <span v-if="content" class="sidemenu-content">
-      <p>이것은 사이드메뉴입니다.</p>
-    </span>
-  </div>
+    <div class="overlay" :style="getOverlayStyle()" v-on:click="onClickOverlay"/>
+    <div class="sidemenu" :style="getSideStyle()">
+      <template>
+        <slot/>
+      </template>
+    </div>
   </div>
 </template>
 
@@ -63,10 +71,8 @@ div.sidemenu {
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 0;
   background-color: #ffca12;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
 }
 </style>

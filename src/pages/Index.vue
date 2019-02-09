@@ -27,8 +27,8 @@ export default {
             id: 1,
             name: '맥북 프로 13인치',
             days: 2,
-            total: 1520000,
-            goal: 2000000,
+            total: 15200,
+            goal: 20000,
             profile: {
               studentId: '1520',
               name: '여준호'
@@ -68,12 +68,14 @@ export default {
 
 <style scoped>
 div.category h1 {
+  margin-top: .3em;
   margin-left: .8em;
-  margin-bottom: .2em;
+  margin-bottom: .4em;
   color: #ffca12;
   font-weight: 900;
   font-size: 2.3em;
   text-align: center;
+  cursor: pointer;
 }
 
 div.products {
@@ -88,7 +90,6 @@ div.product {
   justify-content: flex-start;
   text-align: left;
   display: inline-block;
-  margin: .5em;
   width: 30%;
 }
 
@@ -99,7 +100,7 @@ div.product {
   }
   div.product {
     width: 45%;
-    margin: .3em;
+    margin: .2em;
   }
 }
 
@@ -114,8 +115,8 @@ div.product {
     font-size: 1.5em;
   }
   div.products {
-    margin-left: 1.2em;    
-    margin-right: 1.2em;
+    margin-left: 1em;    
+    margin-right: 1em;
   }
 }
 </style>

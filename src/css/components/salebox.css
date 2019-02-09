@@ -1,11 +1,17 @@
 div.product {
   cursor: pointer;
+  border-radius: 5px;
+}
+
+div.product:hover {
+  background: rgb(250, 250, 250);
 }
 
 img {
   width: 100%;
   height: 60%;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 div.info {

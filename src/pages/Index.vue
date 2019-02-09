@@ -73,6 +73,7 @@ div.category h1 {
   color: #ffca12;
   font-weight: 900;
   font-size: 2.3em;
+  text-align: center;
 }
 
 div.products {

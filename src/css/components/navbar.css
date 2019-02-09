@@ -1,5 +1,5 @@
 /* 전체 상단 바 */
-div {
+div.navbar {
     background-color: #ffca12;
     height: 5em;
     text-align: center;
@@ -10,11 +10,13 @@ div {
 img.logo {
     height: 80%;
     margin: 8px;
+    cursor: pointer;
 }
 /* 아이콘 공통 스타일 */
 i.fas {
     color: white;
     margin: .7em;
+    cursor: pointer;
 }
 /* 메뉴 아이콘 */
 i.fa-bars {
@@ -26,7 +28,7 @@ i.fa-search {
 }
 @media (max-width: 700px) {
     /* 화면이 작은 디바이스용 -> 상단 바 및 아이콘 사이즈 줄이기 */
-    div {
+    div.navbar {
         height: 4em;
     }
     i.fas {
